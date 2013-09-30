@@ -11,8 +11,12 @@ Class Foto_model extends CI_Model {
         //print_r($files);
         //echo $id;
         //$articulo = $this->get_one_articulo2($id);
-        $path = './fotos/' . $id . '/original/';
-        $path2 = './fotos/' . $id . '/thumbs/';
+        $path = './fotos/' . $id . '/460x360/';
+        $path2 = './fotos/' . $id . '/77x38/';
+        $path3 = './fotos/' . $id . '/933x674/';
+        //$path = './fotos/' . $id . '/975x457/'; //BANNER
+        //$path = './fotos/' . $id . '/152x61/'; //BANNER
+        $path4 = './fotos/' . $id . '/188x114/';
         ;
         //echo $path;
         if (!is_dir($path)) { //create the folder if it's not already exists
@@ -21,6 +25,14 @@ Class Foto_model extends CI_Model {
         
         if (!is_dir($path2)) { //create the folder if it's not already exists
             mkdir($path2, 0755, TRUE);
+        }
+        
+        if (!is_dir($path3)) { //create the folder if it's not already exists
+            mkdir($path3, 0755, TRUE);
+        }
+        
+        if (!is_dir($path4)) { //create the folder if it's not already exists
+            mkdir($path4, 0755, TRUE);
         }
 
         //$this->load->library('upload');
@@ -60,8 +72,10 @@ Class Foto_model extends CI_Model {
 
                 $imagen = $this->upload->data();
 
-                $this->resize($imagen,$imagen['full_path'],array('height' => 400, 'width' => 400));
-                $this->resize($imagen,$path2.'/'.$imagen['file_name'],array('height' => 50, 'width' => 50));
+                $this->resize($imagen,$imagen['full_path'],array('height' => 460, 'width' => 360));
+                $this->resize($imagen,$path2.'/'.$imagen['file_name'],array('height' => 77, 'width' => 38));
+                $this->resize($imagen,$path3.'/'.$imagen['file_name'],array('height' => 933, 'width' => 674));
+                $this->resize($imagen,$path4.'/'.$imagen['file_name'],array('height' => 188, 'width' => 114));
                 
                 $this->db->insert('foto', array('nombre' => $imagen['file_name'], 'carrousel' => 0, 'autos_venta_idauto_venta' => $id));
             }
