@@ -154,7 +154,6 @@ Class Foto_model extends CI_Model {
         $configu['maintain_ratio'] = FALSE;
         $configu['width'] = $medidas['width'];
         $configu['height'] = $medidas['height'];
-        $configu['maintain_ratio'] = TRUE;
         $this->load->library('image_lib', $configu);
         $this->image_lib->resize();
     }
