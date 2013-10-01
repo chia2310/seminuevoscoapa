@@ -72,10 +72,10 @@ Class Foto_model extends CI_Model {
 
                 $imagen = $this->upload->data();
 
-                $this->resize($imagen,$imagen['full_path'],array('height' => 460, 'width' => 360));
-                $this->resize($imagen,$path2.'/'.$imagen['file_name'],array('height' => 77, 'width' => 38));
-                $this->resize($imagen,$path3.'/'.$imagen['file_name'],array('height' => 933, 'width' => 674));
-                $this->resize($imagen,$path4.'/'.$imagen['file_name'],array('height' => 188, 'width' => 114));
+                $this->resize($imagen,$imagen['full_path'],array('height' => 360, 'width' => 460));
+                $this->resize($imagen,$path2.'/'.$imagen['file_name'],array('height' => 38, 'width' => 77));
+                $this->resize($imagen,$path3.'/'.$imagen['file_name'],array('height' => 674, 'width' => 933));
+                $this->resize($imagen,$path4.'/'.$imagen['file_name'],array('height' => 114, 'width' => 188));
                 
                 $this->db->insert('foto', array('nombre' => $imagen['file_name'], 'carrousel' => 0, 'autos_venta_idauto_venta' => $id));
             }
@@ -137,8 +137,8 @@ Class Foto_model extends CI_Model {
 
                 $imagen = $this->upload->data();
 
-                $this->resize($imagen,$imagen['full_path'],array('height' => 975, 'width' => 457));
-                $this->resize($imagen,$path2.'/'.$imagen['file_name'],array('height' => 152, 'width' => 61));
+                $this->resize($imagen,$imagen['full_path'],array('height' => 457, 'width' => 975));
+                $this->resize($imagen,$path2.'/'.$imagen['file_name'],array('height' => 61, 'width' => 152));
                 
                 $this->db->insert('foto', array('nombre' => $imagen['file_name'], 'carrousel' => 1, 'autos_venta_idauto_venta' => $id));
             }
@@ -151,13 +151,57 @@ Class Foto_model extends CI_Model {
         $configu['image_library'] = 'gd2';
         $configu['source_image'] = $imagen['full_path'];
         $configu['new_image'] = $path;
-        $configu['maintain_ratio'] = FALSE;
+        $configu['maintain_ratio'] = TRUE;
         $configu['width'] = $medidas['width'];
         $configu['height'] = $medidas['height'];
         $this->load->library('image_lib', $configu);
         $this->image_lib->resize();
     }
-
+    
+    public function RellenaDesdeBD($idauto){
+        $result=$this->db->query("
+            SELECT idfoto, nombre, carrousel
+            FROM foto WHERE carrousel=0 and autos_venta_idauto_venta=".$idauto);
+        $tmp=$result->result_array();
+        if(empty($tmp)){
+            $data=array(
+            "idfoto"=>"",
+            "nombre"=>"",
+            "carrousel"=>""
+                );
+        }else{
+            $data=$tmp;
+        }
+        return $data;
+    }
+    public function eliminarFoto($idauto,$idfoto){
+        $result=$this->db->query("SELECT nombre FROM foto WHERE idfoto=".$idfoto);
+        $tmp=$result->result_array();
+        $fileName=$tmp[0]["nombre"];
+        $nombre_fichero188 = './fotos/'.$idauto.'/188x114/'.$fileName;
+        $nombre_fichero460 = './fotos/'.$idauto.'/460x360/'.$fileName;
+        $nombre_fichero77 = './fotos/'.$idauto.'/77x38/'.$fileName;
+        $nombre_fichero933 = './fotos/'.$idauto.'/933x674/'.$fileName;
+        //$nombre_fichero='C:\xampp\htdocs\seminuevoscoapa\admin\fotos\4\188x114\auto_20131001130144.jpg';
+        if (file_exists($nombre_fichero188)) {
+            unlink($nombre_fichero188); 
+        }
+        if (file_exists($nombre_fichero460)) {
+            unlink($nombre_fichero460); 
+        }
+        if (file_exists($nombre_fichero77)) {
+            unlink($nombre_fichero77); 
+        }
+        if (file_exists($nombre_fichero933)) {
+            unlink($nombre_fichero933); 
+        }
+        $this->db->query("DELETE FROM foto WHERE idfoto=".$idfoto);
+     }
+     public function FotosXIdAuto($idauto){
+         $result=$this->db->query("SELECT COUNT(*) as conteo FROM foto WHERE autos_venta_idauto_venta=".$idauto);
+         $tmp=$result->result_array();
+         $tmp=$tmp[0]["conteo"];
+         return $tmp;
+     }
 }
-
 ?>

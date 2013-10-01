@@ -40,11 +40,6 @@ $config = array(
           'rules'=>'required|trim'
       ),
         array(
-          'field'=>'combustible',
-          'label'=>'combustible del vehículo',
-          'rules'=>'required|trim'
-      ),
-        array(
           'field'=>'transmision',
           'label'=>'transmisión del vehículo',
           'rules'=>'required|trim'

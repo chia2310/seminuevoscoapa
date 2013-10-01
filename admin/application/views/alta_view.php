@@ -6,7 +6,7 @@
     if($idauto>0){
     ?>
     <tr>
-        <td width="20%" align="left" valign="middle">Vendido:</td>
+        <td width="20%" align="left" valign="middle">Home:</td>
         <td width="80%" colspan="2" align="left" valign="middle">
             <input type="checkbox" name="vendido" <?php echo ($info["vendido"]==1)? "checked='checked'":""; ?> id="vendido">
         </td>
@@ -56,12 +56,6 @@
       <input id="kilometraje" name="kilometraje" class="span2 moneda" value="<?php echo $info['kilometraje']; ?>" placeholder="Kilometraje del auto" type="text">
       <span class="add-on">Kms</span>
     </div>
-        </td>
-    </tr>
-    <tr>
-        <td width="20%" align="left" valign="middle">Combustible:</td>
-        <td width="80%" colspan="2" align="left" valign="middle">
-            <input id="combustible" name="combustible" type="text" value="<?php echo $info['combustible']; ?>" placeholder="Combustible" class="span4">
         </td>
     </tr>
     <tr>

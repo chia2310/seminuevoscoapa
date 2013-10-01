@@ -112,16 +112,12 @@
     
 } else{
     ?>
-    <a href="<?php echo site_url("panel/inventario?modelo=&marca=0&years=0&estatus=3&buscar=Buscar")?>">
-
-    <input type="button" class="btn btn-primary" value="Inventario de autos"/>
-
+    <a class="btn btn-primary" href="<?php echo site_url("panel/inventario?modelo=&marca=0&years=0&estatus=3&buscar=Buscar")?>">
+    Inventario de autos
     </a>
 
-    <a href="<?php echo site_url("panel/alta")?>">
-
-    <input type="button" class="btn btn-primary" value="Alta auto"/>
-
+    <a class="btn btn-primary"  href="<?php echo site_url("panel/alta")?>">
+    Alta auto
     </a>
 <?php }?>
     </div>

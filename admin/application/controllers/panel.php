@@ -48,8 +48,8 @@ class Panel extends CI_Controller{
             $data["Marcas"]=$Marcas;
             $Years =$this->panel->ArregloYears(range(date("Y")+1,date("Y")-43));
             $Estatus=array(
-                "0"=>"No vendido",
-                "1"=>"Vendido");
+                "0"=>"No home",
+                "1"=>"En home");
             $data["Estatus"]=$Estatus;
             $data["Years"]=$Years;
             $data["visible"]="1";

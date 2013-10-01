@@ -22,6 +22,8 @@ class Foto extends CI_Controller {
         $title["seccion"]="Galería";
         $data["seccion"] = "nada";
         $data["auto"]=$idauto;
+        $data["info"]=$this->foto->RellenaDesdeBD($idauto);
+        $data["count"]=$this->foto->FotosXIdAuto($idauto);
         $this->load->view('head_view',$title);
         $this->load->view('galeria_view', $data);
         $this->load->view('footer_view');
@@ -43,19 +45,16 @@ class Foto extends CI_Controller {
         }
         
         if(isset($info['upload'])){
-            $this->phpsession->flashsave('acierto','Las imágenes han sido subidas con éxito');
+            $this->phpsession->flashsave('acierto','Las imágenes se han sido subidas con éxito');
         }
-        
-        
-        $this->phpsession->flashsave('menu_img',1);
-        
-        redirect('articulo/editar/'.$post['id']);
+                    
+        redirect('foto/galeria/'.$post['id']);
     }
     
-    public function borrar(){
-        $post = $this->input->post(NULL,TRUE);
-        //$post['image'] = 4;
-        $this->biblioteca->borrar_imagen($post['image']);
+    public function eliminar($idauto,$idfoto){
+        $this->foto->eliminarFoto($idauto,$idfoto);
+        $this->phpsession->flashsave('acierto','La imagen se han borrado con éxito');
+        redirect('foto/galeria/'.$idauto);
     }
 
 }

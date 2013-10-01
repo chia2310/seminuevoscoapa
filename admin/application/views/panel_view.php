@@ -55,7 +55,7 @@ if ($seccion == "inventario") {
                     <td width="18.75%"><h4>Modelo</h4></td>
                     <td width="18.75%"><h4>Año</h4></td>
                     <td width="18.75%"><h4>Precio</h4></td>
-                    <td width="5%"><h4>Vendido</h4></td>
+                    <td width="5%"><h4>Home</h4></td>
                     <td width="5%"><h4>Promoción</h4></td>
                     <td width="5%"><h4>Fotos</h4></td>
                     <td width="5%"><h4>Editar</h4></td>
