@@ -45,47 +45,57 @@ $auto = AM_get_one($id);
                                 <div class="SSSlide shadow clearfix grpelem" id="u1414"><!-- image -->
                                     <div id="u1414_clip">
                                         <?php $img = (!isset($auto['imagenes'][0]['nombre'])) ? 'admin/fotos/generico/460x360/sin-imagen.jpg' : 'admin/fotos/'.$auto['idauto_venta'].'/460x360/'.$auto['imagenes'][0]['nombre'];?>
-                                        <img class="ImageInclude position_content" id="u1414_img" data-src="<?php echo $img;?>" src="images/blank.gif" alt="" data-width="480" data-height="383"/>
+                                        <img class="ImageInclude position_content" id="u1414_img" data-src="<?php echo $img;?>" src="images/blank.gif" alt="" />
                                     </div>
                                 </div>
                                 <div class="SSSlide invi shadow clearfix grpelem" id="u1423"><!-- image -->
                                     <div id="u1423_clip">
-                                        <img class="ImageInclude position_content" id="u1423_img" data-src="images/2.jpg" src="images/blank.gif" alt="" data-width="492" data-height="360"/>
+                                        <?php $img = (!isset($auto['imagenes'][1]['nombre'])) ? 'admin/fotos/generico/460x360/sin-imagen.jpg' : 'admin/fotos/'.$auto['idauto_venta'].'/460x360/'.$auto['imagenes'][1]['nombre'];?>
+                                        <img class="ImageInclude position_content" id="u1423_img" data-src="<?php echo $img;?>" src="images/blank.gif" alt="" />
                                     </div>
                                 </div>
                                 <div class="SSSlide invi shadow clearfix grpelem" id="u1432"><!-- image -->
                                     <div id="u1432_clip">
-                                        <img class="ImageInclude position_content" id="u1432_img" data-src="images/3.jpg" src="images/blank.gif" alt="" data-width="590" data-height="360"/>
+                                        <?php $img = (!isset($auto['imagenes'][2]['nombre'])) ? 'admin/fotos/generico/460x360/sin-imagen.jpg' : 'admin/fotos/'.$auto['idauto_venta'].'/460x360/'.$auto['imagenes'][2]['nombre'];?>
+                                        <img class="ImageInclude position_content" id="u1432_img" data-src="<?php echo $img;?>" src="images/blank.gif" alt="" />
                                     </div>
                                 </div>
                                 <div class="SSSlide invi shadow clearfix grpelem" id="u1441"><!-- image -->
                                     <div id="u1441_clip">
-                                        <img class="ImageInclude position_content" id="u1441_img" data-src="images/4.jpg" src="images/blank.gif" alt="" data-width="531" data-height="360"/>
+                                        <?php $img = (!isset($auto['imagenes'][3]['nombre'])) ? 'admin/fotos/generico/460x360/sin-imagen.jpg' : 'admin/fotos/'.$auto['idauto_venta'].'/460x360/'.$auto['imagenes'][3]['nombre'];?>
+                                        
+                                        <img class="ImageInclude position_content" id="u1441_img" data-src="<?php echo $img;?>" src="images/blank.gif" alt="" />
                                     </div>
                                 </div>
                                 <div class="SSSlide invi shadow clearfix grpelem" id="u1450"><!-- image -->
                                     <div id="u1450_clip">
-                                        <img class="ImageInclude position_content" id="u1450_img" data-src="images/5.jpg" src="images/blank.gif" alt="" data-width="480" data-height="399"/>
+                                        <?php $img = (!isset($auto['imagenes'][4]['nombre'])) ? 'admin/fotos/generico/460x360/sin-imagen.jpg' : 'admin/fotos/'.$auto['idauto_venta'].'/460x360/'.$auto['imagenes'][4]['nombre'];?>
+                                        <img class="ImageInclude position_content" id="u1450_img" data-src="<?php echo $img;?>" src="images/blank.gif" alt="" />
                                     </div>
                                 </div>
                                 <div class="SSSlide invi shadow clearfix grpelem" id="u1459"><!-- image -->
                                     <div id="u1459_clip">
-                                        <img class="ImageInclude position_content" id="u1459_img" data-src="images/6.jpg" src="images/blank.gif" alt="" data-width="480" data-height="469"/>
+                                        <?php $img = (!isset($auto['imagenes'][5]['nombre'])) ? 'admin/fotos/generico/460x360/sin-imagen.jpg' : 'admin/fotos/'.$auto['idauto_venta'].'/460x360/'.$auto['imagenes'][5]['nombre'];?>
+                                        <img class="ImageInclude position_content" id="u1459_img" data-src="<?php echo $img;?>" src="images/blank.gif" alt="" />
                                     </div>
                                 </div>
                                 <div class="SSSlide invi shadow grpelem" id="u1468"><!-- image -->
-                                    <img class="block ImageInclude" id="u1468_img" data-src="images/7.jpg" src="images/blank.gif" alt="" data-width="480" data-height="360"/>
+                                    <?php $img = (!isset($auto['imagenes'][6]['nombre'])) ? 'admin/fotos/generico/460x360/sin-imagen.jpg' : 'admin/fotos/'.$auto['idauto_venta'].'/460x360/'.$auto['imagenes'][6]['nombre'];?>
+                                    <img class="block ImageInclude" id="u1468_img" data-src="<?php echo $img;?>" src="images/blank.gif" alt="" />
                                 </div>
                                 <div class="SSSlide invi shadow grpelem" id="u1477"><!-- image -->
-                                    <img class="block ImageInclude" id="u1477_img" data-src="images/8.jpg" src="images/blank.gif" alt="" data-width="480" data-height="360"/>
+                                    <?php $img = (!isset($auto['imagenes'][7]['nombre'])) ? 'admin/fotos/generico/460x360/sin-imagen.jpg' : 'admin/fotos/'.$auto['idauto_venta'].'/460x360/'.$auto['imagenes'][7]['nombre'];?>
+                                    <img class="block ImageInclude" id="u1477_img" data-src="<?php echo $img;?>" src="images/blank.gif" alt="" />
                                 </div>
                                 <div class="SSSlide invi shadow clearfix grpelem" id="u1486"><!-- image -->
                                     <div id="u1486_clip">
-                                        <img class="ImageInclude position_content" id="u1486_img" data-src="images/9.jpg" src="images/blank.gif" alt="" data-width="480" data-height="387"/>
+                                        <?php $img = (!isset($auto['imagenes'][8]['nombre'])) ? 'admin/fotos/generico/460x360/sin-imagen.jpg' : 'admin/fotos/'.$auto['idauto_venta'].'/460x360/'.$auto['imagenes'][8]['nombre'];?>
+                                        <img class="ImageInclude position_content" id="u1486_img" data-src="<?php echo $img;?>" src="images/blank.gif" alt="" />
                                     </div>
                                 </div>
                                 <div class="SSSlide invi shadow grpelem" id="u1495"><!-- image -->
-                                    <img class="block ImageInclude" id="u1495_img" data-src="images/10.jpg" src="images/blank.gif" alt="" data-width="480" data-height="360"/>
+                                    <?php $img = (!isset($auto['imagenes'][9]['nombre'])) ? 'admin/fotos/generico/460x360/sin-imagen.jpg' : 'admin/fotos/'.$auto['idauto_venta'].'/460x360/'.$auto['imagenes'][9]['nombre'];?>
+                                    <img class="block ImageInclude" id="u1495_img" data-src="<?php echo $img;?>" src="images/blank.gif" alt="" />
                                 </div>
                             </div>
                         </div>
@@ -96,83 +106,104 @@ $auto = AM_get_one($id);
                         <div class="popup_anchor" id="u3794popup">
                             <div class="SlideShowContentPanel rgba-background clearfix" id="u3794"><!-- stack box -->
                                 <div class="SSSlide grpelem" id="u3885"><!-- image -->
-                                    <img class="block ImageInclude" id="u3885_img" data-src="images/12.jpg" src="images/blank.gif" alt="" data-width="844" data-height="674"/>
+                                    <?php $img = (!isset($auto['imagenes'][0]['nombre'])) ? 'admin/fotos/generico/933x674/sin-imagen.jpg' : 'admin/fotos/'.$auto['idauto_venta'].'/933x674/'.$auto['imagenes'][0]['nombre'];?>
+                                    <img class="block ImageInclude" id="u3885_img" data-src="<?php echo $img;?>" src="images/blank.gif" alt="" />
                                 </div>
                                 <div class="SSSlide invi grpelem" id="u3894"><!-- image -->
-                                    <img class="block ImageInclude" id="u3894_img" data-src="images/dsc_1163.jpg" src="images/blank.gif" alt="" data-width="933" data-height="569"/>
+                                    <?php $img = (!isset($auto['imagenes'][1]['nombre'])) ? 'admin/fotos/generico/933x674/sin-imagen.jpg' : 'admin/fotos/'.$auto['idauto_venta'].'/933x674/'.$auto['imagenes'][1]['nombre'];?>
+                                    <img class="block ImageInclude" id="u3894_img" data-src="<?php echo $img;?>" src="images/blank.gif" alt=""/>
                                 </div>
                                 <div class="SSSlide invi grpelem" id="u3903"><!-- image -->
-                                    <img class="block ImageInclude" id="u3903_img" data-src="images/dsc_1160.jpg" src="images/blank.gif" alt="" data-width="921" data-height="674"/>
+                                    <?php $img = (!isset($auto['imagenes'][2]['nombre'])) ? 'admin/fotos/generico/933x674/sin-imagen.jpg' : 'admin/fotos/'.$auto['idauto_venta'].'/933x674/'.$auto['imagenes'][2]['nombre'];?>
+                                    <img class="block ImageInclude" id="u3903_img" data-src="<?php echo $img;?>" src="images/blank.gif" alt=""/>
                                 </div>
                                 <div class="SSSlide invi grpelem" id="u3912"><!-- image -->
-                                    <img class="block ImageInclude" id="u3912_img" data-src="images/dsc_1168.jpg" src="images/blank.gif" alt="" data-width="811" data-height="674"/>
+                                    <?php $img = (!isset($auto['imagenes'][3]['nombre'])) ? 'admin/fotos/generico/933x674/sin-imagen.jpg' : 'admin/fotos/'.$auto['idauto_venta'].'/933x674/'.$auto['imagenes'][3]['nombre'];?>
+                                    <img class="block ImageInclude" id="u3912_img" data-src="<?php echo $img;?>" src="images/blank.gif" alt=""/>
                                 </div>
                                 <div class="SSSlide invi grpelem" id="u3921"><!-- image -->
-                                    <img class="block ImageInclude" id="u3921_img" data-src="images/dsc_1170.jpg" src="images/blank.gif" alt="" data-width="933" data-height="666"/>
+                                    <?php $img = (!isset($auto['imagenes'][4]['nombre'])) ? 'admin/fotos/generico/933x674/sin-imagen.jpg' : 'admin/fotos/'.$auto['idauto_venta'].'/933x674/'.$auto['imagenes'][4]['nombre'];?>
+                                    <img class="block ImageInclude" id="u3921_img" data-src="<?php echo $img;?>" src="images/blank.gif" alt=""/>
                                 </div>
                                 <div class="SSSlide invi grpelem" id="u3930"><!-- image -->
-                                    <img class="block ImageInclude" id="u3930_img" data-src="images/dsc_1173.jpg" src="images/blank.gif" alt="" data-width="899" data-height="674"/>
+                                    <?php $img = (!isset($auto['imagenes'][5]['nombre'])) ? 'admin/fotos/generico/933x674/sin-imagen.jpg' : 'admin/fotos/'.$auto['idauto_venta'].'/933x674/'.$auto['imagenes'][5]['nombre'];?>
+                                    <img class="block ImageInclude" id="u3930_img" data-src="<?php echo $img;?>" src="images/blank.gif" alt=""/>
                                 </div>
                                 <div class="SSSlide invi grpelem" id="u3939"><!-- image -->
-                                    <img class="block ImageInclude" id="u3939_img" data-src="images/dsc_1176.jpg" src="images/blank.gif" alt="" data-width="836" data-height="674"/>
+                                    <?php $img = (!isset($auto['imagenes'][6]['nombre'])) ? 'admin/fotos/generico/933x674/sin-imagen.jpg' : 'admin/fotos/'.$auto['idauto_venta'].'/933x674/'.$auto['imagenes'][6]['nombre'];?>
+                                    <img class="block ImageInclude" id="u3939_img" data-src="<?php echo $img;?>" src="images/blank.gif" alt=""/>
                                 </div>
                                 <div class="SSSlide invi grpelem" id="u3948"><!-- image -->
-                                    <img class="block ImageInclude" id="u3948_img" data-src="images/dsc_1182-1-.jpg" src="images/blank.gif" alt="" data-width="899" data-height="674"/>
+                                    <?php $img = (!isset($auto['imagenes'][7]['nombre'])) ? 'admin/fotos/generico/933x674/sin-imagen.jpg' : 'admin/fotos/'.$auto['idauto_venta'].'/933x674/'.$auto['imagenes'][7]['nombre'];?>
+                                    <img class="block ImageInclude" id="u3948_img" data-src="<?php echo $img;?>" src="images/blank.gif" alt=""/>
                                 </div>
                                 <div class="SSSlide invi grpelem" id="u3957"><!-- image -->
-                                    <img class="block ImageInclude" id="u3957_img" data-src="images/dsc_1188.jpg" src="images/blank.gif" alt="" data-width="933" data-height="457"/>
+                                    <?php $img = (!isset($auto['imagenes'][8]['nombre'])) ? 'admin/fotos/generico/933x674/sin-imagen.jpg' : 'admin/fotos/'.$auto['idauto_venta'].'/933x674/'.$auto['imagenes'][8]['nombre'];?>
+                                    <img class="block ImageInclude" id="u3957_img" data-src="<?php echo $img;?>" src="images/blank.gif" alt=""/>
                                 </div>
                                 <div class="SSSlide invi grpelem" id="u3966"><!-- image -->
-                                    <img class="block ImageInclude" id="u3966_img" data-src="images/dsc_1193.jpg" src="images/blank.gif" alt="" data-width="690" data-height="674"/>
+                                    <?php $img = (!isset($auto['imagenes'][9]['nombre'])) ? 'admin/fotos/generico/933x674/sin-imagen.jpg' : 'admin/fotos/'.$auto['idauto_venta'].'/933x674/'.$auto['imagenes'][9]['nombre'];?>
+                                    <img class="block ImageInclude" id="u3966_img" data-src="<?php echo $img;?>" src="images/blank.gif" alt=""/>
                                 </div>
                             </div>
                         </div>
+                        
                         <div class="popup_anchor" id="u3762popup">
                             <div class="SSSlideLinks clearfix" id="u3762"><!-- horizontal-rows box -->
                                 <div class="SSSlideLink clearfix grpelem" id="u3888"><!-- image -->
                                     <div id="u3888_clip">
-                                        <img class="position_content" id="u3888_img" src="images/160x48.jpg" alt="" width="60" height="48"/>
+                                        <?php $img = (!isset($auto['imagenes'][0]['nombre'])) ? 'admin/fotos/generico/77x38/sin-imagen.jpg' : 'admin/fotos/'.$auto['idauto_venta'].'/77x38/'.$auto['imagenes'][0]['nombre'];?>
+                                        <img class="position_content" id="u3888_img" src="<?php echo $img;?>" alt="" />
                                     </div>
                                 </div>
                                 <div class="SSSlideLink clearfix grpelem" id="u3897"><!-- image -->
                                     <div id="u3897_clip">
-                                        <img class="position_content" id="u3897_img" src="images/dsc_116374x45.jpg" alt="" width="74" height="45"/>
+                                        <?php $img = (!isset($auto['imagenes'][1]['nombre'])) ? 'admin/fotos/generico/77x38/sin-imagen.jpg' : 'admin/fotos/'.$auto['idauto_venta'].'/77x38/'.$auto['imagenes'][1]['nombre'];?>
+                                        <img class="position_content" id="u3897_img" src="<?php echo $img;?>" alt="" />
                                     </div>
                                 </div>
                                 <div class="SSSlideLink clearfix grpelem" id="u3906"><!-- image -->
                                     <div id="u3906_clip">
-                                        <img class="position_content" id="u3906_img" src="images/dsc_116062x45.jpg" alt="" width="62" height="45"/>
+                                        <?php $img = (!isset($auto['imagenes'][2]['nombre'])) ? 'admin/fotos/generico/77x38/sin-imagen.jpg' : 'admin/fotos/'.$auto['idauto_venta'].'/77x38/'.$auto['imagenes'][2]['nombre'];?>
+                                        <img class="position_content" id="u3906_img" src="<?php echo $img;?>" alt="" />
                                     </div>
                                 </div>
                                 <div class="SSSlideLink clearfix grpelem" id="u3915"><!-- image -->
                                     <div id="u3915_clip">
-                                        <img class="position_content" id="u3915_img" src="images/dsc_116860x50.jpg" alt="" width="60" height="50"/>
+                                        <?php $img = (!isset($auto['imagenes'][3]['nombre'])) ? 'admin/fotos/generico/77x38/sin-imagen.jpg' : 'admin/fotos/'.$auto['idauto_venta'].'/77x38/'.$auto['imagenes'][3]['nombre'];?>
+                                        <img class="position_content" id="u3915_img" src="<?php echo $img;?>" alt="" />
                                     </div>
                                 </div>
                                 <div class="SSSlideLink clearfix grpelem" id="u3924"><!-- image -->
                                     <div id="u3924_clip">
-                                        <img class="position_content" id="u3924_img" src="images/dsc_117064x45.jpg" alt="" width="63" height="45"/>
+                                        <?php $img = (!isset($auto['imagenes'][4]['nombre'])) ? 'admin/fotos/generico/77x38/sin-imagen.jpg' : 'admin/fotos/'.$auto['idauto_venta'].'/77x38/'.$auto['imagenes'][4]['nombre'];?>
+                                        <img class="position_content" id="u3924_img" src="<?php echo $img;?>" alt="" />
                                     </div>
                                 </div>
                                 <div class="SSSlideLink grpelem" id="u3933"><!-- image -->
-                                    <img class="block" id="u3933_img" src="images/dsc_117360x45.jpg" alt="" width="60" height="45"/>
+                                    <?php $img = (!isset($auto['imagenes'][5]['nombre'])) ? 'admin/fotos/generico/77x38/sin-imagen.jpg' : 'admin/fotos/'.$auto['idauto_venta'].'/77x38/'.$auto['imagenes'][5]['nombre'];?>
+                                    <img class="block" id="u3933_img" src="<?php echo $img;?>" alt="" />
                                 </div>
                                 <div class="SSSlideLink clearfix grpelem" id="u3942"><!-- image -->
                                     <div id="u3942_clip">
-                                        <img class="position_content" id="u3942_img" src="images/dsc_117660x49.jpg" alt="" width="60" height="48"/>
+                                        <?php $img = (!isset($auto['imagenes'][6]['nombre'])) ? 'admin/fotos/generico/77x38/sin-imagen.jpg' : 'admin/fotos/'.$auto['idauto_venta'].'/77x38/'.$auto['imagenes'][6]['nombre'];?>
+                                        <img class="position_content" id="u3942_img" src="<?php echo $img;?>" alt="" />
                                     </div>
                                 </div>
                                 <div class="SSSlideLink grpelem" id="u3951"><!-- image -->
-                                    <img class="block" id="u3951_img" src="images/dsc_1182-1-60x45.jpg" alt="" width="60" height="45"/>
+                                    <?php $img = (!isset($auto['imagenes'][7]['nombre'])) ? 'admin/fotos/generico/77x38/sin-imagen.jpg' : 'admin/fotos/'.$auto['idauto_venta'].'/77x38/'.$auto['imagenes'][7]['nombre'];?>
+                                    <img class="block" id="u3951_img" src="<?php echo $img;?>" alt="" />
                                 </div>
                                 <div class="SSSlideLink clearfix grpelem" id="u3960"><!-- image -->
                                     <div id="u3960_clip">
-                                        <img class="position_content" id="u3960_img" src="images/dsc_118892x45.jpg" alt="" width="92" height="45"/>
+                                        <?php $img = (!isset($auto['imagenes'][8]['nombre'])) ? 'admin/fotos/generico/77x38/sin-imagen.jpg' : 'admin/fotos/'.$auto['idauto_venta'].'/77x38/'.$auto['imagenes'][8]['nombre'];?>
+                                        <img class="position_content" id="u3960_img" src="<?php echo $img;?>" alt="" />
                                     </div>
                                 </div>
                                 <div class="SSSlideLink clearfix grpelem" id="u3969"><!-- image -->
                                     <div id="u3969_clip">
-                                        <img class="position_content" id="u3969_img" src="images/dsc_119360x59.jpg" alt="" width="60" height="59"/>
+                                        <?php $img = (!isset($auto['imagenes'][9]['nombre'])) ? 'admin/fotos/generico/77x38/sin-imagen.jpg' : 'admin/fotos/'.$auto['idauto_venta'].'/77x38/'.$auto['imagenes'][9]['nombre'];?>
+                                        <img class="position_content" id="u3969_img" src="<?php echo $img;?>" alt="" />
                                     </div>
                                 </div>
                             </div>
