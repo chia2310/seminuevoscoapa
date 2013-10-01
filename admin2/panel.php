@@ -4,8 +4,9 @@
 <html>
 <head>
 	<title>Seminuevos Coapa</title>
-	
-    <link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap.css" id="pagesheet"/>
+	<link href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/css/bootstrap-combined.no-icons.min.css" rel="stylesheet">
+<link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet">
+   
     <link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap-responsive.css" id="pagesheet"/>
     
     <script type="text/javascript">
@@ -57,7 +58,26 @@ function actualizaInfo(maximoCaracteres) {
 <div  align="center">
   Bienvenido, aqui podras actualizar tus productos
     <p style="font-size:9px">recomendamos usar Chrome</p>
-<div class="span7"><a href="admin2/inventario.php"> Inventario de Autos </a></div><div class="span2;"> <a href="admin2/subir-auto.php">Subir auto</a> </div>
+    
+         
+         
+         
+        
+        
+<div class="span2 offset1"></div><div class="span2"><p>
+        <a class="btn btn-large btn-primary" href="#">
+          <i class="icon-list-alt icon-4x"></i> Inventario</a>
+          </p></div>
+          
+          <div class="span2"> <p>
+          <a class="btn btn-large btn-primary" href="#">
+        <i class="icon-edit-sign icon-4x"></i><br> Subir Auto</a></p> </div>
+       
+        <div class="span2"> <p>
+          <a class="btn btn-large btn-primary" href="../admin2/carrusel.php">
+        <i class="icon-star icon-4x"></i><br> carrusel</a></p> </div>
+
+<!--<div class="span2;"><a href="../admin/carrusel.php">Carrusel</a> </div>-->
 
 
 

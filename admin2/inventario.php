@@ -1,7 +1,9 @@
 <!DOCTYPE HTML>
 <html>
 <head>
+
 	<title>Seminuevos Coapa</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 	
     <link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap.css" id="pagesheet"/>
     <link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap-responsive.css" id="pagesheet"/>
@@ -63,14 +65,14 @@ function actualizaInfo(maximoCaracteres) {
   <div class="span9">
     
     <div class="row">
-      <div class="span3"><label class="control-label" for="modelo">Modelo</label>
+      <div class="span1 ofset1"><label class="control-label" for="modelo">Modelo</label>
         <div class="controls">
-          <input id="modelo" name="modelo" type="text" placeholder="Modelo" class="input-large search-query">
+          <input id="modelo" name="modelo" type="text" placeholder="Modelo" class="input-medium search-query">
           
           </div></div>
-      <div class="span3"><label class="control-label" for="modelo">Marca</label>
+      <div class="span1 offset1"><label class="control-label" for="modelo">Marca</label>
          <div class="controls">
-              <select id="marca" name="marca" class="input-large">
+              <select id="marca" name="marca" class="input-medium">
                 <option>- Marca -</option>
                 <option>Acura</option>
                 <option>Alfa Romeo</option>
@@ -119,9 +121,9 @@ function actualizaInfo(maximoCaracteres) {
                 <option>Volvo</option>
               </select>
             </div></div>
-      <div class="span3"><label class="control-label" for="modelo">Año</label>
+      <div class="span1 offset1"><label class="control-label" for="modelo">Año</label>
         <div class="controls">
-          <select id="año" name="año" class="input-large">
+          <select id="anio" name="anio" class="input-medium">
               <option>- Año -</option>
               <option value="2013">2013</option>
               <option value="2012">2012</option>
@@ -170,6 +172,15 @@ function actualizaInfo(maximoCaracteres) {
               </select>
           
           </div></div>
+          <div class="span1 offset1"><label class="control-label" for="modelo">Vendido</label>
+         <div class="controls">
+              <select id="vendidos" name="vendidos" class="input-medium">
+                <option>- ---- -</option>
+                <option>Vendido</option>
+                <option>No Vendido</option>
+               
+              </select>
+            </div></div>
     </div>
   </div>
 </div>
@@ -181,7 +192,7 @@ function actualizaInfo(maximoCaracteres) {
   
     <th scope="col">Auto</th>
     <th scope="col">Marca</th>
-    <th scope="col">A�o</th>
+    <th scope="col">Año</th>
     <th scope="col">Fotos</th>
     
   </tr>
@@ -189,33 +200,25 @@ function actualizaInfo(maximoCaracteres) {
     <td>aqui se jalara el nombre del auto, como un seat</td>
     <td>aqui se mostrara marca</td>
     <td>2014</td>
-    <td><button id="botonimagenes" name="botonimagenes" class="btn btn-default">boton</button></td>
-    <th scope="col"> Anunciar 
+    <td align="center"><a style="color:#333"><i class="icon-camera icon-large"><br>Subir</i></a></td>
+    <th scope="col"> Vendido
       <label class="checkbox inline" for="home-0">
-      <input type="checkbox" name="home" id="home-0" value="promocionar en home">
+      <input type="checkbox" name="vendido" id="vendido-0" value="promocionar en home">
       
     </label>
     </th>
     <th scope="col">
-     Promoci�n <label class="checkbox inline" for="home-0">
+     Promoción 
+       <label class="checkbox inline" for="home-0">
       <input type="checkbox" name="promocion" id="promocion-0" value="promocionar en home">
       
     </label>
     </th>
      
-    <th scope="col">
-     Carrusel 
-       <label class="checkbox inline" for="home-0">
-      <input type="checkbox" name="promocion" id="promocion-0" value="promocionar en home">
-      
-    </label><br>
-    <label class="control-label" for="imagen_carrusel"></label>
-  
-    <input id="imagen_carrusel" name="imagen_carrusel" class="input-file" type="file"></br>
-    </th>
-    <th scope="col"><a style="color:#333"><i class="icon-remove icon-large">remover</i></a></th>&nbsp;&nbsp;&nbsp;
-    <th scope="col">
-    <a style="color:#333"><i class="icon-edit icon-large">editar</i></a>&nbsp;&nbsp;&nbsp;
+   
+    <th align="center" scope="col"><a style="color:#333"><i class="icon-remove icon-large"><br>Remover</i></a></th>&nbsp;&nbsp;&nbsp;
+    <th align="center" scope="col">
+    <a style="color:#333"><i class="icon-edit icon-large"><br>Editar</i></a>&nbsp;&nbsp;&nbsp;
    
   
    </th>

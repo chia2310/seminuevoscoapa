@@ -8,7 +8,9 @@ class Login extends CI_Controller{
     public function index(){
        if ($this->form_validation->run('login') == FALSE) {
             $this->phpsession->clear();
-            $this->load->view('head_view');
+            $title["title"]="Login";
+            $title["seccion"]="Login";
+            $this->load->view('head_view',$title);
             $this->load->view('login_view');
             $this->load->view('footer_view');
         } else {

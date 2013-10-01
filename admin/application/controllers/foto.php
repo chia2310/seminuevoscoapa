@@ -1,6 +1,6 @@
 <?php
 
-class Panel extends CI_Controller {
+class Foto extends CI_Controller {
 
     public function __construct() {
 
@@ -17,8 +17,14 @@ class Panel extends CI_Controller {
         $this->load->view('footer_view');
     }
     
-    public function galeria(){
-        
+    public function galeria($idauto){
+        $title["title"]="Galería";
+        $title["seccion"]="Galería";
+        $data["seccion"] = "nada";
+        $data["auto"]=$idauto;
+        $this->load->view('head_view',$title);
+        $this->load->view('galeria_view', $data);
+        $this->load->view('footer_view');
     }
     
     public function subir(){

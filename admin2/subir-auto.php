@@ -1,4 +1,5 @@
-<!DOCTYPE HTML>
+
+<!DOCTYPE HTML PUBLIC>
 
 <html>
 <head>
@@ -7,7 +8,43 @@
     <link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap.css" id="pagesheet"/>
     <link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap-responsive.css" id="pagesheet"/>
     
-   
+    <script type="text/javascript">
+function limita(elEvento, maximoCaracteres) {
+  var elemento = document.getElementById("texto");
+
+  // Obtener la tecla pulsada 
+  var evento = elEvento || window.event;
+  var codigoCaracter = evento.charCode || evento.keyCode;
+  // Permitir utilizar las teclas con flecha horizontal
+  if(codigoCaracter == 37 || codigoCaracter == 39) {
+    return true;
+  }
+
+  // Permitir borrar con la tecla Backspace y con la tecla Supr.
+  if(codigoCaracter == 8 || codigoCaracter == 46) {
+    return true;
+  }
+  else if(elemento.value.length >= maximoCaracteres ) {
+    return false;
+  }
+  else {
+    return true;
+  }
+}
+
+function actualizaInfo(maximoCaracteres) {
+  var elemento = document.getElementById("texto");
+  var info = document.getElementById("info");
+
+  if(elemento.value.length >= maximoCaracteres ) {
+    info.innerHTML = "Máximo "+maximoCaracteres+" caracteres";
+  }
+  else {
+    info.innerHTML = "Puedes escribir hasta "+(maximoCaracteres-elemento.value.length)+" caracteres adicionales";
+  }
+}
+
+</script>
 
 
 </head>
@@ -25,7 +62,7 @@
 <fieldset>
 
 <!-- Form Name -->
-<legend>Ingresa los siguientes datos para dar de alta un nuevo vehï¿½culo<p style="font-size:9px">recomendamos usar Chrome</p></legend>
+<legend>Ingresa los siguientes datos para dar de alta un nuevo vehículo<p style="font-size:9px">recomendamos usar Chrome</p></legend>
 
 <!-- Select Basic -->
 <div class="control-group">
@@ -92,18 +129,18 @@
 
 <!-- Text input-->
 <div class="control-group">
-  <label class="control-label" for="version">Versiï¿½n</label>
+  <label class="control-label" for="version">Versión</label>
   <div class="controls">
-    <input id="version" name="version" type="text" placeholder="Versiï¿½n del auto" class="input-large">
+    <input id="version" name="version" type="text" placeholder="Versión del auto" class="input-large">
     
   </div>
 </div>
 
  <div class="control-group">
-  <label class="control-label" for="marca">Aï¿½o</label>
+  <label class="control-label" for="marca">Año</label>
   <div class="controls">
-    <select id="aï¿½o" name="aï¿½o" class="input-large">
-      <option>- Aï¿½o -</option>
+    <select id="año" name="año" class="input-large">
+      <option>- Año -</option>
     
 	<option value="2013">2013</option>
 	<option value="2012">2012</option>
@@ -176,9 +213,9 @@
 
 <!-- Text input-->
 <div class="control-group">
-  <label class="control-label" for="transmision">Transmisiï¿½n</label>
+  <label class="control-label" for="transmision">Transmisión</label>
   <div class="controls">
-    <input id="transmision" name="transmision" type="text" placeholder="Tipo de transmisiï¿½n" class="input-large">
+    <input id="transmision" name="transmision" type="text" placeholder="Tipo de transmisión" class="input-large">
     
   </div>
 </div>
@@ -199,7 +236,7 @@
 
 <!-- Textarea -->
 <div class="control-group">
-  <label class="control-label" for="descripcion" id="info">DescripciÃ³n:</label>
+  <label class="control-label" for="descripcion" id="info">Puedes escribir máximo 255 caracteres</label>
   <div class="controls">                     
     <textarea id="texto" width="600px" name="texto" onKeyPress="return limita(event, 255);" onKeyUp="actualizaInfo(255)" rows="6" cols="300"></textarea>
   </div>

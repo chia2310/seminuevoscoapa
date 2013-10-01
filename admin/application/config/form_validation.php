@@ -12,5 +12,52 @@ $config = array(
             'label' => 'contraseña',
             'rules' => 'required'
         )
+    ),
+    'altaauto' => array(
+        array(
+          'field'=>'marca',
+          'label'=>'marca del vehículo',
+          'rules'=>'required|trim'
+      ),
+        array(
+          'field'=>'modelo',
+          'label'=>'modelo del vehículo',
+          'rules'=>'required|trim'
+      ),
+        array(
+          'field'=>'version',
+          'label'=>'versión del vehículo',
+          'rules'=>'required|trim'
+      ),
+        array(
+          'field'=>'years',
+          'label'=>'año del vehículo',
+          'rules'=>'required|trim'
+      ),
+        array(
+          'field'=>'kilometraje',
+          'label'=>'kilometraje del vehículo',
+          'rules'=>'required|trim'
+      ),
+        array(
+          'field'=>'combustible',
+          'label'=>'combustible del vehículo',
+          'rules'=>'required|trim'
+      ),
+        array(
+          'field'=>'transmision',
+          'label'=>'transmisión del vehículo',
+          'rules'=>'required|trim'
+      ),
+        array(
+          'field'=>'precio',
+          'label'=>'precio del vehículo',
+          'rules'=>'required|trim'
+      ),
+        array(
+          'field'=>'texto',
+          'label'=>'descripción del vehículo',
+          'rules'=>'required|trim'
+      ),
     )
 );
